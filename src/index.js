@@ -1,6 +1,11 @@
 import { createHomePage, createMenuPage, createContactPage } from "./page-load";
-import './reset.css'
-import './style.css'
+import './chicken.jpg';
+import './food.jpg';
+import './github-icon.png';
+import './grilled-chicken.jpg';
+import './map.jpg';
+import './reset.css';
+import './style.css';
 
 
 const content = document.querySelector('#content');
