@@ -1,3 +1,5 @@
+import GithubIcon from'./github-icon.png';
+import Food from './food.jpg';
 export function createHomePage(content) {
   content.innerHTML = '';
   const div = document.createElement('div');
@@ -11,10 +13,10 @@ export function createHomePage(content) {
   const contactButton = document.createElement('button');
   const copytitle = document.createElement('p');
   const copy = document.createElement('p');
-  const image = document.createElement('img');
+  const image = new Image();
   const callToAction = document.createElement('p');
   const gitLink = document.createElement('a');
-  const gitIcon = document.createElement('img');
+  const gitIcon = new Image();
   restaurantName.textContent = 'Thai Me Up Restaurant';
   homeButton.textContent = 'Home';
   menuButton.textContent = 'Menu';
@@ -23,10 +25,10 @@ export function createHomePage(content) {
   copy.textContent = 'Made with passion since forever';
   homeButton.classList.add('selected')
   main.classList.add('homepage')
-  image.setAttribute('src', '../src/food.jpg');
+  image.src = Food;
   callToAction.textContent = 'Order online or visit us!';
   gitLink.setAttribute('href', '#');
-  gitIcon.setAttribute('src', '../src/github-icon.png')
+  gitIcon.src = GithubIcon;
   buttonContainer.append(homeButton, menuButton, contactButton);
   header.append(restaurantName, buttonContainer);
   main.append(copytitle, copy, image, callToAction);

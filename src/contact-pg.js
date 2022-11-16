@@ -1,3 +1,5 @@
+import GithubIcon from'./github-icon.png';
+import Map from './map.jpg';
 export function createContactPage(content) {
     content.innerHTML = '';
     const div = document.createElement('div');
@@ -11,9 +13,9 @@ export function createContactPage(content) {
     const contactButton = document.createElement('button');
     const contact = document.createElement('p');
     const location = document.createElement('p');
-    const map = document.createElement('img'); 
+    const map = new Image(); 
     const gitLink = document.createElement('a');
-    const gitIcon = document.createElement('img');
+    const gitIcon = new Image();
     contact.textContent = "📞 123 456 789";
     location.textContent = "🏠 Hollywood Boulevard 42, Los Santos, Grand Rapides"
     restaurantName.textContent = 'Thai Me Up Restaurant';
@@ -22,9 +24,9 @@ export function createContactPage(content) {
     contactButton.textContent = 'Contact';
     contactButton.classList.add('selected')
     main.classList.add('contactpage')
-    map.setAttribute('src', '../src/map.jpg');
+    map.src = Map;
     gitLink.setAttribute('href', '#');
-    gitIcon.setAttribute('src', '../src/github-icon.png')
+    gitIcon.src = GithubIcon;
     buttonContainer.append(homeButton, menuButton, contactButton);
     header.append(restaurantName, buttonContainer);
     main.append(contact, location, map);

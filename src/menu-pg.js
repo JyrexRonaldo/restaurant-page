@@ -1,3 +1,6 @@
+import GrilledChicken from './grilled-chicken.jpg';
+import Chicken from './chicken.jpg';
+import GithubIcon from'./github-icon.png';
 export function createMenuPage(content) {
     content.innerHTML = '';
     const div = document.createElement('div');
@@ -11,14 +14,14 @@ export function createMenuPage(content) {
     const contactButton = document.createElement('button');
     const itemOne = document.createElement('div');
     const itemTwo = document.createElement('div');
-    const itemOneImage = document.createElement('img');
-    const itemTwoImage = document.createElement('img');
+    const itemOneImage = new Image();
+    const itemTwoImage = new Image();
     const itemOneDescription = document.createElement('p');
     const itemTwoDescription = document.createElement('p');
     const gitLink = document.createElement('a');
-    const gitIcon = document.createElement('img');
-    itemOneImage.setAttribute('src', '../src/grilled-chicken.jpg');
-    itemTwoImage.setAttribute('src', '../src/chicken.jpg')
+    const gitIcon = new Image()
+    itemOneImage.src = GrilledChicken;
+    itemTwoImage.src = Chicken;
     itemOneDescription.textContent = "Grilled chicken";
     itemTwoDescription.textContent = "Chicken" 
     restaurantName.textContent = 'Thai Me Up Restaurant';
@@ -28,7 +31,7 @@ export function createMenuPage(content) {
     menuButton.classList.add('selected')
     main.classList.add('menupage')
     gitLink.setAttribute('href', '#');
-    gitIcon.setAttribute('src', '../src/github-icon.png')
+    gitIcon.src = GithubIcon;
     buttonContainer.append(homeButton, menuButton, contactButton);
     header.append(restaurantName, buttonContainer);
     itemOne.append(itemOneImage, itemOneDescription);
