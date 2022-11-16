@@ -1,4 +1,5 @@
 export function createHomePage(content) {
+  content.innerHTML = '';
   const div = document.createElement('div');
   const header = document.createElement('header');
   const main = document.createElement('main');
@@ -14,28 +15,23 @@ export function createHomePage(content) {
   const callToAction = document.createElement('p');
   const gitLink = document.createElement('a');
   const gitIcon = document.createElement('img');
-
   restaurantName.textContent = 'Thai Me Up Restaurant';
   homeButton.textContent = 'Home';
   menuButton.textContent = 'Menu';
   contactButton.textContent = 'Contact';
-  copytitle.textContent = 'Best Thai foods in pour country';
+  copytitle.textContent = 'Best Thai foods in your country';
   copy.textContent = 'Made with passion since forever';
+  homeButton.classList.add('selected')
+  main.classList.add('homepage')
   image.setAttribute('src', '../src/food.jpg');
   callToAction.textContent = 'Order online or visit us!';
   gitLink.setAttribute('href', '#');
   gitIcon.setAttribute('src', '../src/github-icon.png')
-
   buttonContainer.append(homeButton, menuButton, contactButton);
   header.append(restaurantName, buttonContainer);
-
   main.append(copytitle, copy, image, callToAction);
-
   footer.append('Copyright © 2022 JyrexRonaldo', gitLink);
-
   gitLink.append(gitIcon);
-
   div.append(header, main, footer);
-  
-  content.append(div)
+  content.append(div);
 }
