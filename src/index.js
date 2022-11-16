@@ -1,4 +1,7 @@
 import { createHomePage, createMenuPage, createContactPage } from "./page-load";
+import './reset.css'
+import './style.css'
+
 
 const content = document.querySelector('#content');
 createHomePage(content)
