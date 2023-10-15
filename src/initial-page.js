@@ -25,7 +25,8 @@ export function loadPage(content) {
     const main = document.createElement('div');
     main.classList.add("main")
     
-    const mainContent = document.createElement('div');
+    const homeContent = document.createElement('div');
+    homeContent.classList.add("home-content")
     
     const textOne = document.createElement('p');
     textOne.textContent = "Best Thai foods in your country";
@@ -37,11 +38,11 @@ export function loadPage(content) {
     foodImage.src = foodImg;
     
     const textThree = document.createElement('p');
-    textThree.textContent = "Copyright © 2022 JyrexRonaldo";
+    textThree.textContent = "Order online or visit us!";
     
     
-    mainContent.append(textOne, textTwo, foodImage, textThree);
-    main.append(mainContent)
+    homeContent.append(textOne, textTwo, foodImage, textThree);
+    main.append(homeContent)
     
     const footer = document.createElement('div');
     footer.classList.add("footer");

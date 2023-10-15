@@ -73,7 +73,7 @@ body {
     align-items: center;
 }
 
-.main div{
+.main > div{
     width: 700px;
     height: 700px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -84,8 +84,19 @@ body {
     gap: 40px;
 }
 
-.main img {
+.home-content img {
     border-radius: 50%;
     width: 400px;
     height: 400px;
+}
+
+.home-content p, .menu-content p {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
 }
