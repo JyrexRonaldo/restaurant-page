@@ -1,5 +1,7 @@
-import foodImg from './food.jpg'
-
+import { createHomePage } from './home-page';
+export {createContactPage} from './contact-page';
+export {createMenuPage} from './menu-page';
+export {createHomePage} from './home-page';
 
 export function loadPage(content) {
     const header = document.createElement('div');
@@ -12,37 +14,23 @@ export function loadPage(content) {
     
     const homeButton = document.createElement('button');
     homeButton.textContent = "Home";
+    homeButton.setAttribute("id", "1")
     
     const menuButton = document.createElement('button');
     menuButton.textContent = "Menu";
-    
+    menuButton.setAttribute("id", "2")
+
     const contactButton = document.createElement('button');
     contactButton.textContent = "Contact";
-    
+    contactButton.setAttribute("id", "3")
+
     headerButtons.append(homeButton, menuButton, contactButton)
     header.append(headline, headerButtons);
 
     const main = document.createElement('div');
     main.classList.add("main")
     
-    const homeContent = document.createElement('div');
-    homeContent.classList.add("home-content")
-    
-    const textOne = document.createElement('p');
-    textOne.textContent = "Best Thai foods in your country";
-    
-    const textTwo = document.createElement('p');
-    textTwo.textContent = "Made with passion since forever";
-    
-    const foodImage = new Image();
-    foodImage.src = foodImg;
-    
-    const textThree = document.createElement('p');
-    textThree.textContent = "Order online or visit us!";
-    
-    
-    homeContent.append(textOne, textTwo, foodImage, textThree);
-    main.append(homeContent)
+    createHomePage(main)
     
     const footer = document.createElement('div');
     footer.classList.add("footer");

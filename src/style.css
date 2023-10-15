@@ -90,13 +90,17 @@ body {
     height: 400px;
 }
 
-.home-content p, .menu-content p {
+.home-content p, .menu-content p, .contact-content p,  .footer p{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu-content img {
+.menu-content img, .contact-content img {
     width: 300px;
     height: auto;
     border-radius: 30px;
+}
+
+.contact-content img {
+    width: 600px;
 }

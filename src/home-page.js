@@ -1,9 +1,8 @@
 import foodImg from './food.jpg'
-// import chicken from "./chicken"
 
 export function createHomePage(mainContent) {
     const homeContent = document.createElement('div');
-    homeContent.classList.add("home-content")
+    homeContent.classList.add("home-content");
     
     const textOne = document.createElement('p');
     textOne.textContent = "Best Thai foods in your country";
@@ -18,8 +17,9 @@ export function createHomePage(mainContent) {
     textThree.textContent = "Order online or visit us!";
     
     
-    homeContent.append(textOne, textTwo, foodImage, textThree);    
-    mainContent.append(homeContent)
+    homeContent.append(textOne, textTwo, foodImage, textThree);
+    mainContent.innerHTML = "";    
+    mainContent.append(homeContent);
 
 }
 
